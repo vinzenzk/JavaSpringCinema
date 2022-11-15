@@ -1,0 +1,18 @@
+<p class="card-text" th:text="${ce.movie.desc}">Keine Beschreibung gefunden...</p>
+<p class="card-text" th:text="${ce.time}">Zeit kommt noch</p>
+<p class="card-text">Kino <span th:text="${ce.cinemahall.getNumber}">??</span> (FSK <span th:text="${ce.movie.getFsk}">??</span>), <span th:text="${ce.movie.length}">??</span> Min.</p>
+<h3 style="text-align: center;">Leinwand</h3>
+<hr>
+<table class="table table-bordered">
+    <tr th:each="i, istat: ${#numbers.sequence(0, rows-1)}">
+        <td th:each="k, kstat: ${#numbers.sequence(0, cols-1)}">
+            <span th:if="${ce.getSeats[__${istat.index}__][__${kstat.index}__].status == false}">
+                <a class="btn btn-small btn-primary" th:href="@{/saveseat(cinemaevent=${ce.getId}, r=${i}, c=${k})}"><i class="bi bi-file-earmark-person"></i></a>
+            </span>
+            <span th:if="${ce.getSeats[__${istat.index}__][__${kstat.index}__].status == true}">
+                <button class="btn btn-small btn-danger" disabled><i class="bi bi-file-earmark-person"></i></button>
+            </span>
+            
+        </td>
+    </tr>
+</table>
