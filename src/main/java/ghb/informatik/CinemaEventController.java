@@ -9,14 +9,13 @@ import org.springframework.web.servlet.view.RedirectView;
 import ghb.informatik.models.CinemaEvent;
 import ghb.informatik.models.CinemaHall;
 import ghb.informatik.models.Movie;
-import ghb.informatik.models.Seat;
 
 @Controller
 public class CinemaEventController {
     
     Movie m1, m2, m3, m4;
     CinemaHall ch1, ch2;
-    CinemaEvent ce1, ce2, ce3, ce4;
+    CinemaEvent ce1, ce2, ce3, ce4, ce5, ce6, ce7, ce8;
 
 
     public CinemaEventController(){
@@ -35,9 +34,6 @@ public class CinemaEventController {
     @GetMapping("/saveseat")
     public RedirectView saveseatseat(@RequestParam(name="cinemaevent", required = true, defaultValue = "0") int cinemaevent, @RequestParam(name="r", required = true, defaultValue = "0") int row, @RequestParam(name="c", required = true, defaultValue = "0") int col,Model model){
         getAllCE()[cinemaevent].getSeats()[row][col].setStatus(true);
-
-
-
         model.addAttribute("activePage", "home");
         return new RedirectView("/");
     }
@@ -82,15 +78,23 @@ public class CinemaEventController {
         ce2 = new CinemaEvent(1, m2, ch2, "12.10.2022, 19:30 Uhr");
         ce3 = new CinemaEvent(2, m3, ch1, "14.10.2022, 19:30 Uhr");
         ce4 = new CinemaEvent(3, m4, ch2, "11.10.2022, 21:30 Uhr");
+        ce5 = new CinemaEvent(4, m4, ch1, "12.10.2022, 19:00 Uhr");
+        ce6 = new CinemaEvent(5, m3, ch2, "15.10.2022, 20:30 Uhr");
+        ce7 = new CinemaEvent(6, m2, ch1, "16.10.2022, 21:15 Uhr");
+        ce8 = new CinemaEvent(7, m1, ch2, "18.10.2022, 20:30 Uhr");
     }
 
     public CinemaEvent[] getAllCE(){
-        CinemaEvent[] allCinemaEvents = new CinemaEvent[4];
+        CinemaEvent[] allCinemaEvents = new CinemaEvent[8];
         
         allCinemaEvents[0] = getCe1();
         allCinemaEvents[1] = getCe2();
         allCinemaEvents[2] = getCe3();
         allCinemaEvents[3] = getCe4();
+        allCinemaEvents[4] = getCe5();
+        allCinemaEvents[5] = getCe6();
+        allCinemaEvents[6] = getCe7();
+        allCinemaEvents[7] = getCe8();
 
         return allCinemaEvents;
     }
@@ -106,6 +110,18 @@ public class CinemaEventController {
     }
     public CinemaEvent getCe4() {
         return ce4;
+    }
+    public CinemaEvent getCe5() {
+        return ce5;
+    }
+    public CinemaEvent getCe6() {
+        return ce6;
+    }
+    public CinemaEvent getCe7() {
+        return ce7;
+    }
+    public CinemaEvent getCe8() {
+        return ce8;
     }
 
     
