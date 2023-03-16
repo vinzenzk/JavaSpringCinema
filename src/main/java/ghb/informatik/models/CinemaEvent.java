@@ -8,6 +8,11 @@ public class CinemaEvent {
     String time;
     int id;
 
+    /*   
+        AUFGABE 2
+
+
+    */
     public CinemaEvent(int id, Movie movie, CinemaHall cinemahall, String time){
         setCinemahall(cinemahall);
         setMovie(movie);

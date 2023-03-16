@@ -11,3 +11,15 @@ public class CinemaApplication {
 	}
 
 }
+
+/*
+
+	AUFGABE 1
+
+
+
+
+
+
+
+ */

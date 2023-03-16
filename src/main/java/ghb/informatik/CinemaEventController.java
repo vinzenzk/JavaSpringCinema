@@ -46,7 +46,13 @@ public class CinemaEventController {
         return "index.html";
     }
 
+    /*
+        AUFGABE 3
+    */    
     private void createDemoData(){
+        ch1 = new CinemaHall(4, 4, 1);
+        ch2 = new CinemaHall(18, 18, 2);
+
         m1 = new Movie("Star Wars Episode 1");
         m1.setDesc("Der erste Teil der tollen Saga!");
         m1.setImgLink("https://m.media-amazon.com/images/I/51KCZ507V3L._SY445_.jpg");
@@ -71,8 +77,7 @@ public class CinemaEventController {
         m4.setFsk(16);
         m4.setLength(178);
 
-        ch1 = new CinemaHall(4, 4, 1);
-        ch2 = new CinemaHall(18, 18, 2);
+        
 
         ce1 = new CinemaEvent(0, m1, ch1, "11.10.2022, 19:00 Uhr");
         ce2 = new CinemaEvent(1, m2, ch2, "12.10.2022, 19:30 Uhr");
