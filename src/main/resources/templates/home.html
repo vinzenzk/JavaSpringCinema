@@ -7,11 +7,20 @@
             <p class="card-text" th:text="${ce.time}">Zeit kommt noch</p>
             <p class="card-text">Kino <span th:text="${ce.cinemahall.getNumber}">??</span> (FSK <span th:text="${ce.movie.getFsk}">??</span>), <span th:text="${ce.movie.length}">??</span> Min.</p>
             <a th:href="@{/setseat(cinemaevent=${ce.getId})}" class="btn btn-primary">Plätze buchen!</a>
+            <a class="btn btn-primary" th:href="${ce.getexternalLink}" role="button">Link</a>
         </div>
     </div>
 </div>
 <!--
 
-    AUFGABE 5
+    Hier arbeitet die For-Each-Schleife wie folgt: 
+    Im Controller wird duch model.addAttribut cinemaEvents mit getAllCE() in verbindung gesetzt. Dadurch wird nun, wenn man in html cinemaEvents aufruft mit einem Pfeil auf getAllCE gezeigt, wodurch nun alle events aufgerufen werden. Dies wird auch in der For-Each-Schleife gemacht. in der For-Each-Schleife wird nun CinemaEvents mit ce benannt. Nun werden nach und nach die einzelnen Informationen durch get... aufgerufen und dargstellt. Durch die class und style wird nun das Layout bestimmt. Zum Schluss wird durch ein Button zu den einzelnen buchungen verlinkt. Dies wiederholt er nun solange bis es keine Ce mehr bei AllCe() gibt.
 
+-->
+
+<!--
+    Folgende Datein mussten geändert werden:
+    Movie.java
+    home.html
+    CinemaEventController.java
 -->
