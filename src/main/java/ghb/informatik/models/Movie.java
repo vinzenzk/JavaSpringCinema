@@ -20,11 +20,11 @@ public class Movie {
         this.imgLink = imgLink;
     }
 
-    public void setexternalLink(String externalLink) {
+    public void setExternalLink(String externalLink) {
         this.externalLink = externalLink;
     }
 
-    public String getexternalLink() {
+    public String getExternalLink() {
         return externalLink;
     }
 

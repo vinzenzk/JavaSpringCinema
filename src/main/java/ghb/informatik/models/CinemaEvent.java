@@ -11,7 +11,7 @@ public class CinemaEvent {
     /*   
         AUFGABE 2
 
-        In dieser For-Schleife werden die Anzahl der Sitze des 2-Dimensionalen Arrays geholt. Nun geht die For-Schleife jeden dieser Sitze einzelt durch, bis den maximal Zahl in der Cinemahall durch sind. Dabei ändert sie den Status aller Sitze auf false, sodass jeder noch belegt werden kann. Das ganze funktioniert, da zwei for-schleifen ineinadner sind. Dadurch kann auch auf das 2-Dimensionale Array vollständig zugegriffen werden. Andernfalls wäre nur auf die 1-Dimension zugegriffen werden können.
+        In dieser For-Schleife werden die Anzahl der Sitze des 2-Dimensionalen Arrays geholt. Nun geht die For-Schleife jeden dieser Sitze einzelt durch, bis die maximale Zahl in der Cinemahall bzw. alles was kleiner ist durch ist. Dabei ändert sie den Status aller Sitze auf false, sodass jeder später noch belegt werden kann. Das Ganze funktioniert, da zwei For-Schleifen ineinander sind. Dadurch kann auch auf das 2-Dimensionale Array vollständig zugegriffen werden. Andernfalls wäre nur auf die 1-Dimension zugegriffen worden.
 
     */
     public CinemaEvent(int id, Movie movie, CinemaHall cinemahall, String time){
