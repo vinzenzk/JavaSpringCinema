@@ -1,0 +1,23 @@
+<h3>Neue Filme hinzufügen</h3>
+<hr>
+<form th:action="@{/addfilme}" class="col-4">
+    <div class="mb-3">
+        <label for="filmeVorname" class="form-label">Vorname</label>
+        <!-- th:name definiert den Namen des Feldes, welches der Controller in der Methodensignatur entgegennimmt. -->
+        <input type="text" class="form-control" id="filmeVorname" placeholder="Vorname" th:name="filmeVorname">
+    </div>
+
+    <div class="mb-3">
+        <label for="filmeNachname" class="form-label">Nachname</label>
+        <input type="text" class="form-control" id="filmeNachname" placeholder="Nachname" th:name="filmeNachname">
+    </div>
+
+    <div class="mb-3">
+        <label for="filmeAlter" class="form-label">Alter</label>
+        <input type="number" class="form-control" id="filmeAlter" placeholder="Alter" th:name="filmeAlter">
+    </div>
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-success mb-3">Filme anlegen</button>
+    </div>
+</form>

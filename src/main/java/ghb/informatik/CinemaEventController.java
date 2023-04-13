@@ -47,6 +47,18 @@ public class CinemaEventController {
         return "index.html";
     }
 
+    @GetMapping("/addfilmeprep")
+    public String addFilmePrep(@RequestParam(name="activePage", required = true, defaultValue = "filme_add_prep") String activePage, Model model) {
+        model.addAttribute("activePage", "filme_add_prep");
+        return "index.html";
+    }
+
+    @GetMapping("/addfilme")
+    public String addFilme(@RequestParam(name="filmetitel", required = true, defaultValue = "null") String filmetitel, @RequestParam(name="filmeFsk", required = true, defaultValue = "null") String filmeFsk, @RequestParam(name="personAlter", required = true, defaultValue = "null") int personAlter, @RequestParam(name="activePage", required = false, defaultValue = "personen_add") String activePage, Model model) {
+        model.addAttribute("activePage", "filme_add_prep");
+        return "index.html";
+    }
+
     /*
         AUFGABE 3
     */    
